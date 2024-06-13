@@ -58,7 +58,7 @@ router.post('/forgotpassword', async (req, res) => {
             from: process.env.EMAIL_USER,
             to: email,
             subject: 'RESET YOUR PASSWORD',
-            text: `https://adhiurl.netlify.app/resetpassword/${user._id}/${token}`
+            text: `https://adhidhyaurl.netlify.app/resetpassword/${user._id}/${token}`
         };
 
         await transporter.sendMail(mailOptions);
