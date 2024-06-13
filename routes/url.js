@@ -12,7 +12,7 @@ router.post('/getshortURL', async (req, res) => {
         if (urlObj) return res.send(urlObj.shortURL);
 
         const shortcode = nanoid(7);
-        const shortURL = `http://localhost:3000/${shortcode}`;
+        const shortURL = `https://loginwithurlshortner-3.onrender.com//${shortcode}`;
         urlObj = new URL({ URL: longURL, shortURL, shortcode });
         await urlObj.save();
         res.send(shortURL);
